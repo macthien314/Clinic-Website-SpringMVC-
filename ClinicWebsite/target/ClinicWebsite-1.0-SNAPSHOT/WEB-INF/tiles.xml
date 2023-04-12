@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd"> 
+
+<tiles-definitions>
+    
+    <definition name ="baseLayout" template="/WEB-INF/jsp/layout/home/base.jsp">
+        <put-attribute name="title" value="..."/>
+        <put-attribute name="header" value="/WEB-INF/jsp/layout/home/header.jsp"/>
+        <put-attribute name ="footer" value="/WEB-INF/jsp/layout/home/footer.jsp"/>
+        <put-attribute name="slide" value=""/>
+        <put-attribute name="content" value="BASE"/>
+    </definition>
+    
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ"/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/index.jsp"/>
+    </definition>
+   
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Login"/>
+        <put-attribute name="slide" value=""/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/login.jsp"/>
+    </definition>
+    
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Đăng ký"/>
+        <put-attribute name="slide" value=""/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/register.jsp"/>
+    </definition>
+    
+    <definition name="medical-detail" extends="baseLayout">
+        <put-attribute name="title" value="chuyen khoa"/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/medical-detail.jsp"/>
+    </definition>
+    
+    <definition name="doctor-detail" extends="baseLayout">
+        <put-attribute name="title" value="bac si"/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/doctor-detail.jsp"/>
+    </definition>
+    
+<!--    <definition name="nurse-detail" extends="baseLayout">
+        <put-attribute name="title" value="bac si"/>
+        <put-attribute name="slide" value="/WEB-INF/layout/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse-detail.jsp"/>
+    </definition>-->
+    
+     <definition name="services-detail" extends="baseLayout">
+        <put-attribute name="title" value="Thông tin dịch vụ"/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/services-detail.jsp"/>
+    </definition>
+    
+      <definition name="appointment-date" extends="baseLayout">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/appointment-date.jsp"/>
+    </definition>
+    
+    
+    <definition name="contact" extends="baseLayout">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="slide" value="/WEB-INF/jsp/layout/home/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/home/contact.jsp"/>
+    </definition>
+    
+   
+    
+    
+     <!-- start admin -->
+     <definition name="adminLayout" template="/WEB-INF/jsp/layout/admin/admin-base.jsp">
+        <put-attribute name="header" value="/WEB-INF/layout/admin/header.jsp"/>
+        <put-attribute name="content" value="BASE"/>
+         <put-attribute name="slidebar" value="/WEB-INF/layout/admin/slidebar.jsp"/>   
+     </definition>
+     
+      <!-- start admin :Nurse manager -->
+    <definition name="nurse-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/nurse/nurse_manager.jsp"/>
+    </definition>
+     <definition name="add-nurse" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/nurse/add_nurse.jsp"/>
+    </definition>
+    <definition name="edit-nurse" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/nurse/edit_nurse.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+     
+       <!-- start admin :doctor manager -->
+    <definition name="doctor-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/doctor/doctor_manager.jsp"/>
+    </definition>
+    <definition name="add-doctor" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/doctor/add_doctor.jsp"/>
+    </definition>
+    <definition name="edit-doctor" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/doctor/edit_doctor.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+     <definition name="medicalexaminationcard-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medicalexaminationcard/medicalexaminationcard_manager.jsp"/>
+    </definition>
+    <definition name="add-medicalexaminationcard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medicalexaminationcard/add_medicalexaminationcard.jsp"/>
+    </definition>
+    <definition name="edit-medicalexaminationcard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medicalexaminationcard/edit_medicalexaminationcard.jsp"/>
+    </definition>
+    
+   
+   
+   
+   
+         <!-- start admin :doctor manager -->
+    <definition name="invoice-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/invoice/invoice_manager.jsp"/>
+    </definition>
+    <definition name="add-invoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/invoice/add_invoice.jsp"/>
+    </definition>
+    <definition name="edit-invoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/invoice/edit_invoice.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+   
+   
+   
+   
+   
+     <!-- start admin :patient manager -->
+    <definition name="prescriptiondrug-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescriptiondrug/prescriptiondrug_manager.jsp"/>
+    </definition>
+    <definition name="add-prescriptiondrug" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescriptiondrug/add_prescriptiondrug.jsp"/>
+    </definition>
+    <definition name="edit-prescriptiondrug" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescriptiondrug/edit_prescriptiondrug.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+   
+   
+   
+ 
+    
+    
+      <!-- start admin :patient manager -->
+    <definition name="drug-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/drug/drug_manager.jsp"/>
+    </definition>
+    <definition name="add-drug" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/drug/add_drug.jsp"/>
+    </definition>
+    <definition name="edit-drug" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/drug/edit_drug.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+    
+         <!-- start admin :patient manager -->
+    <definition name="patient-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/patient/patient_manager.jsp"/>
+    </definition>
+    <definition name="add-patient" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/patient/add_patient.jsp"/>
+    </definition>
+     <definition name="edit-patient" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/patient/edit_patient.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+          <!-- start admin :patient manager -->
+    <definition name="appointment-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/appointment/appointment_manager.jsp"/>
+    </definition>
+    <definition name="add-appointment" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/appointment/add_appointment.jsp"/>
+    </definition>
+    <definition name="edit-appointment" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/appointment/edit_appointment.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+     
+           <!-- start admin :patient manager -->
+    <definition name="services-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/service/service_manager.jsp"/>
+    </definition>
+    <definition name="add-services" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/service/add_service.jsp"/>
+    </definition>
+     <definition name="edit-services" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/service/edit_service.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+    
+             <!-- start admin :patient manager -->
+    <definition name="serviceinvoice-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/serviceinvoice/serviceinvoice_manager.jsp"/>
+    </definition>
+    <definition name="add-serviceinvoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/serviceinvoice/add_serviceinvoice.jsp"/>
+    </definition>
+    <definition name="edit-serviceinvoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/serviceinvoice/edit_serviceinvoice.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+      <!-- start admin :patient manager -->
+    <definition name="prescription-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescription/prescription_manager.jsp"/>
+    </definition>
+    <definition name="add-prescription" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescription/add_prescription.jsp"/>
+    </definition>
+    <definition name="edit-prescription" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/prescription/edit_prescription.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+    
+    
+     
+    <definition name="admin" extends="adminLayout">
+         <put-attribute name="content" value="/WEB-INF/jsp/admin/dashboard/dashboard.jsp"/>
+    </definition>
+    
+    <definition name="profile" extends="adminLayout">
+          <put-attribute name="content" value="/WEB-INF/jsp/admin/profile.jsp"/>
+    </definition>      
+    
+    <definition name="table" extends="adminLayout">
+          <put-attribute name="content" value="/WEB-INF/jsp/admin/table.jsp"/>
+    </definition>
+    <definition name="slide-manager" extends="adminLayout">
+          <put-attribute name="content" value="/WEB-INF/jsp/admin/slide/slide_manager.jsp"/>
+    </definition>
+    <definition name="slide-infomation" extends="adminLayout">
+          <put-attribute name="content" value="/WEB-INF/jsp/admin/slide/slide_information.jsp"/>
+    </definition>
+    <definition name="add-slide" extends="adminLayout">
+          <put-attribute name="content" value="/WEB-INF/jsp/admin/slide/add_slide.jsp"/>
+    </definition>
+    <definition name="edit-slide" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/slide/edit_slide.jsp"/>
+    </definition>
+    
+    <!-- start admin :user manager -->
+    <definition name="user-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/user/user_manager.jsp"/>
+    </definition>
+    <definition name="doctor-user" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/user/doctor_user_manager.jsp"/>
+    </definition>
+    <definition name="nurse-user" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/user/nurse_user_manager.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+    <!-- start admin :medical manager -->
+    <definition name="medical-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medical/medical_manager.jsp"/>
+    </definition>
+    <definition name="add-medical" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medical/add_medical.jsp"/>
+    </definition>
+<definition name="edit-medical" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/medical/edit_medical.jsp"/>
+    </definition>
+    <!-- End admin: user manager -->
+    
+    <definition name="numpatient-month" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/stats/numpatient-month.jsp"/>
+    </definition>
+     
+    <definition name="invoicestats-month" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/stats/invoicestat-month.jsp"/>
+    </definition>
+    
+    
+    
+    
+  
+    
+    
+    <!-- End admin -->
+    
+    <!-- Start nurse user -->
+    <definition name="nurse-patient-manager" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/patientmanager/patient.jsp"/>
+    </definition>
+    
+    <definition name="nurse-edit-patient" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/patientmanager/edit_patient.jsp"/>
+    </definition>
+    <definition name="patient-serviceinvoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/serviceinvoice/patient.jsp"/>
+    </definition>
+    <definition name="serviceinvoice-list" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/serviceinvoice/service_invoice.jsp"/>
+    </definition>
+    <definition name="nurse-medcard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/medicalcard/med_card.jsp"/>
+    </definition>
+    <definition name="nurse-medcardlist" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/medicalcard/med_card_list.jsp"/>
+    </definition>
+    <definition name="nurse-patient-invoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/invoice/patient_invoice.jsp"/>
+    </definition>
+    <definition name="nurse-prescription" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/invoice/prescription_list.jsp"/>
+    </definition>
+    <definition name="nurse-prescription-invoice" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/invoice/prescription_invoice.jsp"/>
+    </definition>
+    
+    
+    <definition name="nurse-appointment" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/appointment/appointment_manager.jsp"/>
+    </definition>
+    
+    <definition name="nurse-edit-appointment" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/nurse/appointment/edit_appointment.jsp"/>
+    </definition>
+    
+    
+    
+    <!-- End nurse user -->
+    
+    <!-- Start Doctor user -->
+    <definition name="doctor-dashboard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/doctor/dashboard.jsp"/>
+    </definition>
+    <definition name="doctor-today-medcard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/doctor/medcard_today.jsp"/>
+    </definition>
+    <definition name="recive-medcard" extends="adminLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/doctor/recive_medcard.jsp"/>
+    </definition>
+    <!-- END DOCTOR user -->
+    
+    
+    <definition name="aboutus" extends="baseLayout">
+        <put-attribute name="title" value="Về chúng tôi"/>
+        <put-attribute name="slide" value="/WEB-INF/layout/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/introduce/aboutus.jsp"/>
+    </definition>
+    
+    <definition name="valuevision" extends="baseLayout">
+        <put-attribute name="title" value="Tầm nhìn-Sứ mệnh-Giá trị cốt lõi"/>
+        <put-attribute name="slide" value="/WEB-INF/layout/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/introduce/valuevision.jsp"/>
+    </definition>
+    
+    <definition name="organizationchart" extends="baseLayout">
+        <put-attribute name="title" value="Sơ đồ tổ chức"/>
+        <put-attribute name="slide" value="/WEB-INF/layout/slide.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/introduce/organizationchart.jsp"/>
+    </definition>
+    
+    
+
+    
+   
+    
+</tiles-definitions>
